@@ -112,6 +112,7 @@
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
+                                    <input type="hidden" name="_method" value="post">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small"
                                             placeholder="Buscar por..." aria-label="Search"
@@ -163,8 +164,8 @@
                             <div id="drp" class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
 
-                                <form action="./data/fp.php" method="post" id="fff">
-                                    
+                                <form action="./data/fp.php" id="fff">
+                                    <input type="hidden" name="_method" value="get" />
                                     <input type="hidden" name="pontosEllen" value="{{lista.Ellen}}"/>                                      
                                     <input type="hidden" name="objRafa" value="{{lista.objRafa}}"/>   
                                     <input type="hidden" name="pontosRafa" value="{{lista.Rafa}}"/>     
