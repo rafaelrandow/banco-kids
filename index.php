@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,7 +34,6 @@
 	<script src="controllers/controllers.js"></script>
 
 </head>
-
 <body id="page-top" ng-app="SimpleMarket">
     <style>
 .input-group-prepend span, .input-group-append span{
@@ -47,7 +44,6 @@
   width:35px!important;
 }
     </style>
-
     <!-- Page Wrapper -->
     <div id="wrapper">
 
