@@ -10,13 +10,14 @@
 
     $conteudo = "[{\"nome\":\"Ellen\",\"pontos\":$p1},{\"nome\":\"Rafa\",\"pontos\":$p2},{\"nome\":\"objRafa\",\"pontos\":\"$p3\"},{\"nome\":\"Bia\",\"pontos\":$p4},{\"nome\":\"objBia\",\"pontos\":\"$p5\"}]";
 
+    echo ($conteudo);
     if ($arquivo) {
       if (!fwrite($arquivo, $conteudo)) die('Não foi possível atualizar o arquivo.');
 
       fclose($arquivo);
 
 
-    echo '<html><head>    <meta http-equiv="refresh" content="0;url=../" /></head><body>   <div>';
+     echo '<html><head>    <meta http-equiv="refresh" content="0;url=../index.html" /></head><body>   <div>';
      echo "<small>salvando...</small><br>";
      echo '</div></body></html>';
     }
