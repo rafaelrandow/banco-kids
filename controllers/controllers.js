@@ -2,7 +2,10 @@
 'use strict';
 angular.module('SimpleMarket', []).controller('PontosCtrl',
 [ '$scope', '$http', function($scope, $http) {
+	
+
 	$http.get('data/pontos.json').success(function(data) {
+		$scope.atualiza();
 		var senha = localStorage.getItem("senha");
 		if (senha == 'lilili') {
 			localStorage.clear();
@@ -10,8 +13,8 @@ angular.module('SimpleMarket', []).controller('PontosCtrl',
 		}else{
 			localStorage.clear();
 		}
-		var status = localStorage.getItem("status");
-		if (status == null) {
+		//var status = localStorage.getItem("status");
+		//if (status == null) {
 			for (var i = 0; i < data.length; i++) {
 				//var id = data[i].id;
 				var nome = data[i].nome;
@@ -23,10 +26,10 @@ angular.module('SimpleMarket', []).controller('PontosCtrl',
 			console.log(JSON.stringify(localStorage));
 			localStorage.setItem("status", "importado"); 
 			//localStorage.setItem(produtos.id,JSON.stringify(produtos));  
-		}
+		//}
 
 		$scope.lista = localStorage;		
-		$scope.atualiza();
+		
 
 		if( $(window).width() < 800){
 			$( "#sidebarToggleTop" ).trigger( "click" );
